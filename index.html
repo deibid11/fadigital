@@ -191,7 +191,7 @@
     .local-rank-heading p { max-width: 560px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
     .local-rank-help { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 9px 12px; border: 1px solid #dfe6f0; border-radius: 999px; background: #f7f9fc; color: #52627a; font-size: 10px; font-weight: 600; }
     .local-rank-help svg { width: 15px; height: 15px; color: var(--blue); }
-    .rank-map-stage { --split: 50%; position: relative; width: 100%; aspect-ratio: 1.9; min-height: 280px; max-height: 520px; margin-top: 21px; overflow: hidden; border: 1px solid rgba(92,132,91,.3); border-radius: 12px; background: #eaf3e5; isolation: isolate; }
+    .rank-map-stage { --split: 50%; position: relative; width: 100%; aspect-ratio: 1.9; min-height: 280px; max-height: 520px; margin-top: 21px; overflow: hidden; border: 1px solid #dce3da; border-radius: 12px; background: #f1f3f1; isolation: isolate; }
     .rank-map-art { position: absolute; inset: 0; width: 100%; height: 100%; }
     .rank-map-layer { position: absolute; z-index: 1; inset: 0; display: grid; grid-template: repeat(4, 1fr) / repeat(4, 1fr); align-items: center; justify-items: center; padding: 68px 7% 7%; pointer-events: none; }
     .rank-map-layer--before { clip-path: inset(0 0 0 var(--split)); }
@@ -235,7 +235,7 @@
     .local-search-query { min-width: 0; flex: 1; display: flex; align-items: center; gap: 10px; padding: 9px 13px; border: 1px solid #e2e8f1; border-radius: 999px; background: #f7f9fc; color: #34445c; font-size: 12px; font-weight: 600; }
     .local-search-query svg { width: 15px; height: 15px; flex: 0 0 15px; color: var(--blue); }
     .local-search-sample { flex: 0 0 auto; color: #737b89; font-size: 10px; font-weight: 600; }
-    .local-results-map { position: relative; height: clamp(220px, 32vw, 340px); margin-top: 12px; overflow: hidden; border: 1px solid #d5e2d1; border-radius: 11px; background: #eaf3e4; isolation: isolate; }
+    .local-results-map { position: relative; height: clamp(220px, 32vw, 340px); margin-top: 12px; overflow: hidden; border: 1px solid #dce3da; border-radius: 11px; background: #f1f3f1; isolation: isolate; }
     .local-results-map-art { position: absolute; inset: 0; width: 100%; height: 100%; }
     .local-map-place { position: absolute; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; max-width: clamp(132px, 15vw, 190px); transform: translate(-50%, -50%); }
     .local-map-pin { position: relative; width: clamp(23px, 2.2vw, 29px); height: clamp(23px, 2.2vw, 29px); border: 3px solid #fff; border-radius: 50% 50% 50% 5px; background: #e56b52; box-shadow: 0 3px 8px rgba(35,47,37,.28); transform: rotate(-45deg); }
@@ -818,28 +818,28 @@
             <svg class="rank-map-art" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
               <defs>
                 <linearGradient id="rank-map-paper" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#eef5e5"/>
-                  <stop offset="1" stop-color="#e2efdc"/>
+                  <stop offset="0" stop-color="#f5f6f2"/>
+                  <stop offset="1" stop-color="#edf1ec"/>
                 </linearGradient>
                 <pattern id="rank-map-grain" width="48" height="48" patternUnits="userSpaceOnUse">
-                  <circle cx="8" cy="12" r="1" fill="#9caf8e" fill-opacity=".2"/>
-                  <circle cx="34" cy="37" r="1" fill="#9caf8e" fill-opacity=".16"/>
+                  <circle cx="8" cy="12" r="1" fill="#879a8a" fill-opacity=".1"/>
+                  <circle cx="34" cy="37" r="1" fill="#879a8a" fill-opacity=".08"/>
                 </pattern>
               </defs>
               <rect width="1000" height="560" fill="url(#rank-map-paper)"/>
               <rect width="1000" height="560" fill="url(#rank-map-grain)"/>
-              <path d="M-25 496C102 453 150 469 255 420S402 365 506 391 653 465 752 447 909 367 1027 374" fill="none" stroke="#a9d8e7" stroke-width="35"/>
-              <path d="M-25 496C102 453 150 469 255 420S402 365 506 391 653 465 752 447 909 367 1027 374" fill="none" stroke="#d4edf1" stroke-width="25"/>
-              <g fill="#cde8bc" stroke="#abd49a" stroke-width="2">
+              <path d="M-25 496C102 453 150 469 255 420S402 365 506 391 653 465 752 447 909 367 1027 374" fill="none" stroke="#aadaf0" stroke-width="35"/>
+              <path d="M-25 496C102 453 150 469 255 420S402 365 506 391 653 465 752 447 909 367 1027 374" fill="none" stroke="#d2e8f7" stroke-width="25"/>
+              <g fill="#dcebd1" stroke="#c6dfbd" stroke-width="2">
                 <path d="M47 54c32-22 98-20 132-4s43 52 24 83-76 39-122 24S27 101 47 54Z"/>
                 <path d="M796 396c42-28 107-20 139 5s40 68 14 99-92 35-130 11-52-77-23-115Z"/>
               </g>
-              <g fill="#a8d58f" fill-opacity=".9">
+              <g fill="#c6dfbd" fill-opacity=".9">
                 <circle cx="78" cy="78" r="10"/><circle cx="122" cy="63" r="8"/><circle cx="165" cy="92" r="11"/>
                 <circle cx="93" cy="126" r="9"/><circle cx="145" cy="137" r="8"/><circle cx="838" cy="425" r="9"/>
                 <circle cx="884" cy="420" r="11"/><circle cx="924" cy="455" r="8"/><circle cx="859" cy="485" r="10"/>
               </g>
-              <g fill="#f7edda" stroke="#e4d8c2" stroke-width="1.5">
+              <g fill="#f4f0e8" stroke="#e7e2d8" stroke-width="1.5">
                 <rect x="232" y="24" width="68" height="34" rx="5"/><rect x="311" y="31" width="54" height="29" rx="5"/>
                 <rect x="407" y="24" width="43" height="38" rx="5"/><rect x="465" y="20" width="73" height="34" rx="5"/>
                 <rect x="570" y="29" width="54" height="33" rx="5"/><rect x="648" y="18" width="72" height="40" rx="5"/>
@@ -857,7 +857,7 @@
                 <rect x="443" y="415" width="48" height="44" rx="5"/><rect x="531" y="408" width="65" height="39" rx="5"/>
                 <rect x="611" y="425" width="51" height="41" rx="5"/><rect x="694" y="426" width="63" height="39" rx="5"/>
               </g>
-              <g fill="none" stroke="#d6cfbf" stroke-linecap="round" stroke-linejoin="round">
+              <g fill="none" stroke="#dadce0" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M-35 385C98 333 186 365 286 329S440 255 514 282 666 322 779 273 911 207 1035 211" stroke-width="29"/>
                 <path d="M-35 139C102 182 180 134 271 167S408 260 514 282 642 353 744 394 911 389 1035 471" stroke-width="25"/>
                 <path d="M155-30C190 66 242 125 218 197S169 329 220 412 305 517 285 590" stroke-width="21"/>
@@ -866,7 +866,7 @@
                 <path d="M382-30C433 57 416 124 389 184S377 262 423 309" stroke-width="17"/>
                 <path d="M-20 240C92 223 165 235 242 251S350 270 406 252" stroke-width="15"/>
               </g>
-              <g fill="none" stroke="#fffdf8" stroke-linecap="round" stroke-linejoin="round">
+              <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M-35 385C98 333 186 365 286 329S440 255 514 282 666 322 779 273 911 207 1035 211" stroke-width="22"/>
                 <path d="M-35 139C102 182 180 134 271 167S408 260 514 282 642 353 744 394 911 389 1035 471" stroke-width="18"/>
                 <path d="M155-30C190 66 242 125 218 197S169 329 220 412 305 517 285 590" stroke-width="14"/>
@@ -936,24 +936,24 @@
               </div>
               <div class="local-results-map" role="img" aria-label="Map preview showing Your business, Shrewsbury Coffee House, The Biscuit Bar and Station Grind around Shrewsbury">
                 <svg class="local-results-map-art" viewBox="0 0 700 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-                  <rect width="700" height="300" fill="#eaf3e4"/>
-                  <path d="M-20 30c52-41 133-33 164 5s9 74-31 93-118 6-143-33ZM535 208c45-38 117-27 148 13s18 77-20 94-112 4-137-33Z" fill="#cae6b9"/>
-                  <path d="M-25 279c100-40 154-15 241-57s138-48 228-16 166 4 282-48" fill="none" stroke="#abd8e5" stroke-width="28"/>
-                  <path d="M-25 279c100-40 154-15 241-57s138-48 228-16 166 4 282-48" fill="none" stroke="#d4edf1" stroke-width="19"/>
-                  <g fill="#f7edda" stroke="#e4d8c2" stroke-width="1.5">
+                  <rect width="700" height="300" fill="#f1f3f1"/>
+                  <path d="M-20 30c52-41 133-33 164 5s9 74-31 93-118 6-143-33ZM535 208c45-38 117-27 148 13s18 77-20 94-112 4-137-33Z" fill="#dcebd1"/>
+                  <path d="M-25 279c100-40 154-15 241-57s138-48 228-16 166 4 282-48" fill="none" stroke="#aadaf0" stroke-width="28"/>
+                  <path d="M-25 279c100-40 154-15 241-57s138-48 228-16 166 4 282-48" fill="none" stroke="#d2e8f7" stroke-width="19"/>
+                  <g fill="#f4f0e8" stroke="#e7e2d8" stroke-width="1.5">
                     <rect x="205" y="18" width="56" height="29" rx="4"/><rect x="273" y="24" width="44" height="34" rx="4"/><rect x="329" y="13" width="60" height="31" rx="4"/>
                     <rect x="421" y="25" width="55" height="38" rx="4"/><rect x="492" y="17" width="39" height="30" rx="4"/><rect x="212" y="72" width="45" height="34" rx="4"/>
                     <rect x="274" y="80" width="58" height="29" rx="4"/><rect x="350" y="69" width="48" height="39" rx="4"/><rect x="414" y="88" width="60" height="30" rx="4"/>
                     <rect x="40" y="135" width="53" height="34" rx="4"/><rect x="104" y="142" width="45" height="40" rx="4"/><rect x="537" y="119" width="53" height="33" rx="4"/>
                     <rect x="601" y="126" width="50" height="38" rx="4"/><rect x="337" y="224" width="48" height="32" rx="4"/><rect x="399" y="215" width="56" height="37" rx="4"/>
                   </g>
-                  <g fill="none" stroke="#d1c9b9" stroke-linecap="round" stroke-linejoin="round">
+                  <g fill="none" stroke="#dadce0" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M-25 123C85 101 151 118 226 147S364 180 435 149 575 94 725 111" stroke-width="24"/>
                     <path d="M162-25C194 45 169 104 212 151S291 218 278 326" stroke-width="20"/>
                     <path d="M512-25C473 40 493 94 526 137S574 222 548 326" stroke-width="19"/>
                     <path d="M-20 202C70 187 134 196 194 218" stroke-width="15"/>
                   </g>
-                  <g fill="none" stroke="#fffdf8" stroke-linecap="round" stroke-linejoin="round">
+                  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M-25 123C85 101 151 118 226 147S364 180 435 149 575 94 725 111" stroke-width="18"/>
                     <path d="M162-25C194 45 169 104 212 151S291 218 278 326" stroke-width="14"/>
                     <path d="M512-25C473 40 493 94 526 137S574 222 548 326" stroke-width="13"/>
@@ -1355,8 +1355,7 @@
     const rankMapStage = rankSlider.closest(".rank-map-stage");
     const updateRankComparison = () => {
       const value = Number(rankSlider.value);
-      const trackWidth = rankSlider.clientWidth - 48;
-      rankMapStage.style.setProperty("--split", `${trackWidth * value / 100}px`);
+      rankMapStage.style.setProperty("--split", `${rankMapStage.clientWidth * value / 100}px`);
       rankSlider.setAttribute(
         "aria-valuetext",
         value === 0 ? "Before view only" :
@@ -1366,6 +1365,34 @@
     };
 
     rankSlider.addEventListener("input", updateRankComparison);
+    let activeRankPointerId = null;
+    const updateRankFromPointer = (event) => {
+      const bounds = rankMapStage.getBoundingClientRect();
+      const position = (event.clientX - bounds.left - rankMapStage.clientLeft) / rankMapStage.clientWidth;
+      const min = Number(rankSlider.min);
+      const max = Number(rankSlider.max);
+      rankSlider.value = String(Math.round(min + Math.max(0, Math.min(1, position)) * (max - min)));
+      updateRankComparison();
+    };
+
+    rankSlider.addEventListener("pointerdown", (event) => {
+      if (!event.isPrimary || (event.pointerType === "mouse" && event.button !== 0)) return;
+      event.preventDefault();
+      rankSlider.focus();
+      activeRankPointerId = event.pointerId;
+      rankMapStage.setPointerCapture(event.pointerId);
+      updateRankFromPointer(event);
+    });
+    rankMapStage.addEventListener("pointermove", (event) => {
+      if (event.pointerId !== activeRankPointerId) return;
+      event.preventDefault();
+      updateRankFromPointer(event);
+    });
+    const endRankPointer = (event) => {
+      if (event.pointerId === activeRankPointerId) activeRankPointerId = null;
+    };
+    rankMapStage.addEventListener("pointerup", endRankPointer);
+    rankMapStage.addEventListener("pointercancel", endRankPointer);
     window.addEventListener("resize", updateRankComparison);
     updateRankComparison();
 
