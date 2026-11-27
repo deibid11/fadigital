@@ -107,7 +107,7 @@
       letter-spacing: .04em; text-transform: none;
     }
     .hero-copy .eyebrow::before { display: block; width: 7px; height: 7px; flex-basis: 7px; border-radius: 50%; background: #bad5f7; content: ""; }
-    .hero-copy h1 .serif { font-family: var(--serif); font-style: italic; }
+    .hero-copy h1 .serif { font-family: var(--display); font-style: normal; font-weight: 600; }
     .hero-copy h1 { max-width: 660px; margin: 22px 0 20px; font: 600 clamp(50px, 6.4vw, 82px)/1.01 var(--sans); letter-spacing: -.055em; text-wrap: balance; }
     .hero-copy h1 .serif { color: #dce9fa; letter-spacing: -.07em; }
     .hero-copy > p { max-width: 485px; margin: 0; color: rgba(255,254,250,.82); font-size: 17px; line-height: 1.75; }
@@ -295,13 +295,12 @@
     .ranking-phone-map-label--north { top: 40%; left: 15%; }
     .ranking-phone-map-label--drain { top: 22%; right: 7%; }
     .ranking-phone-map-label--wrench { top: 62%; left: 36%; }
-    .ranking-phone-results { --phone-result-step: 65px; position: relative; height: calc(var(--phone-result-step) * 5); margin: 0; padding: 0; list-style: none; }
+    .ranking-phone-results { --phone-result-step: 65px; position: relative; height: calc(var(--phone-result-step) * 4); margin: 0; padding: 0; list-style: none; }
     .ranking-phone-results li { position: absolute; top: 0; right: 0; left: 0; height: var(--phone-result-step); display: grid; grid-template-columns: minmax(0, 1fr) 44px; align-items: center; gap: 8px; padding: 7px 11px 6px 13px; border-bottom: 1px solid #e8eaee; transform: translateY(var(--phone-row-offset, 0)); transition: transform .62s cubic-bezier(.2,.8,.2,1), background .25s; }
     .ranking-phone-results li:nth-child(1) { --phone-row-offset: 0px; }
     .ranking-phone-results li:nth-child(2) { --phone-row-offset: 65px; }
     .ranking-phone-results li:nth-child(3) { --phone-row-offset: 130px; }
     .ranking-phone-results li:nth-child(4) { --phone-row-offset: 195px; }
-    .ranking-phone-results li:nth-child(5) { --phone-row-offset: 260px; }
     .ranking-phone-demo.is-resetting .ranking-phone-results li { transition: none; }
     .ranking-phone-result-copy { min-width: 0; }
     .ranking-phone-result-title { display: flex; align-items: center; gap: 7px; min-width: 0; }
@@ -313,9 +312,9 @@
     .ranking-phone-result-copy p strong { color: #188038; font-weight: 600; }
     .ranking-phone-tool { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 9px; background: #f0f1f3; color: #9aa0a8; }
     .ranking-phone-tool svg { width: 21px; height: 21px; }
-    .ranking-phone-rank { flex: 0 0 auto; padding: 3px 7px; border-radius: 999px; background: #9639bd; color: #fff; font-size: 9px; font-weight: 700; }
-    .ranking-phone-results li.ranking-phone-featured { border-left: 3px solid #a83bd0; background: #f7e7fc; }
-    .ranking-phone-featured .ranking-phone-tool { background: #f3dafa; color: #a64ac5; }
+    .ranking-phone-rank { flex: 0 0 auto; padding: 3px 7px; border-radius: 999px; background: #278c43; color: #fff; font-size: 9px; font-weight: 700; }
+    .ranking-phone-results li.ranking-phone-featured { border-left: 3px solid var(--blue); background: var(--mist); }
+    .ranking-phone-featured .ranking-phone-tool { background: #dce9fa; color: var(--blue); }
     .ranking-phone-status { min-height: 17px; margin: 13px 0 0; color: #536178; font-size: 11px; font-weight: 600; text-align: center; }
     .ranking-phone-caption { margin: 4px 0 0; color: #73809a; font-size: 10px; line-height: 1.5; text-align: center; }
     .performance-demo { margin-top: 40px; }
@@ -623,7 +622,8 @@
       .hero-copy .text-link { color: var(--ink); }
       .hero-copy .text-link svg { color: var(--blue); }
       .opportunity, .services, .projects, .contact { margin: 12px; padding: 56px 0; border-radius: 24px; }
-      .seo-demos { margin: 12px; padding: 38px 0; border-radius: 24px; }
+      .seo-demos { margin: 8px 12px; padding: 6px 0 38px; border-radius: 24px; }
+      .seo-demos > .wrap { width: 100%; }
       .opportunity { background: linear-gradient(145deg, #eaf0fa 0%, #f0f3f8 65%, #f5f1e9 100%); }
       .services { background: radial-gradient(ellipse at 90% 15%, rgba(166,198,177,.18), transparent 30%), linear-gradient(145deg, #f1f5fc 0%, #f8f6f0 100%); }
       .projects { margin-bottom: 0; padding-bottom: 48px; border-radius: 24px 24px 0 0; }
@@ -647,7 +647,7 @@
       .service-grid { grid-auto-columns: 88%; grid-auto-flow: column; grid-template-columns: none; gap: 12px; margin: 0 -16px; padding: 2px 16px 14px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-inline: contain; }
       .service-grid::-webkit-scrollbar { display: none; }
       .service-card { padding: 22px 20px; border-radius: 16px; scroll-snap-align: center; }
-      .local-rank-demo { margin: 24px 0 30px; padding: 0; border-radius: 0; }
+      .local-rank-demo { margin: 10px 0 30px; padding: 0; border-radius: 0; }
       .local-rank-heading { display: block; }
       .local-rank-heading h3 { margin-top: 11px; font-size: clamp(22px, 6vw, 29px); }
       .local-rank-help { margin-top: 13px; }
@@ -698,7 +698,6 @@
       .ranking-phone-results li:nth-child(2) { --phone-row-offset: 62px; }
       .ranking-phone-results li:nth-child(3) { --phone-row-offset: 124px; }
       .ranking-phone-results li:nth-child(4) { --phone-row-offset: 186px; }
-      .ranking-phone-results li:nth-child(5) { --phone-row-offset: 248px; }
       .ranking-phone-result-title h4 { font-size: 11px; }
       .ranking-phone-tool { width: 39px; height: 39px; }
       .performance-demo { margin-top: 30px; }
@@ -805,7 +804,6 @@
       .ranking-phone-results li:nth-child(2) { --phone-row-offset: 60px; }
       .ranking-phone-results li:nth-child(3) { --phone-row-offset: 120px; }
       .ranking-phone-results li:nth-child(4) { --phone-row-offset: 180px; }
-      .ranking-phone-results li:nth-child(5) { --phone-row-offset: 240px; }
       .ranking-phone-tool { width: 35px; height: 35px; }
       .website-preview-demo { padding: 14px; }
       .website-preview-illustration { min-height: 118px; }
@@ -1143,7 +1141,7 @@
             <div class="ranking-phone-heading">
               <span class="eyebrow">On a customer's phone</span>
               <h3 id="ranking-phone-title">A local search, right in their hands.</h3>
-              <p>See how a nearby customer could compare plumbing businesses and spot yours in the results.</p>
+              <p>See how a nearby customer could compare local electricians and spot yours in the results.</p>
               <button class="local-search-replay" id="ranking-phone-replay" type="button" aria-controls="ranking-phone-results">
                 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.9-3M4 4v4h4m-4 5a8 8 0 0 0 14.9 3M20 20v-4h-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 Replay ranking
@@ -1162,13 +1160,13 @@
                 </div>
                 <div class="ranking-phone-search">
                   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m15 18-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span class="ranking-phone-query">plumber near me</span>
-                  <span class="ranking-phone-avatar" aria-hidden="true">J</span>
+                  <span class="ranking-phone-query">electricians near me</span>
+                  <span class="ranking-phone-avatar" aria-hidden="true">A</span>
                 </div>
                 <div class="ranking-phone-filters" role="group" aria-label="Example local search filters">
                   <span>Open now</span><span>Top rated</span><span>Hours</span><span>Price</span>
                 </div>
-                <div class="ranking-phone-map" role="img" aria-label="Illustrative map with nearby plumbing businesses in red">
+                <div class="ranking-phone-map" role="img" aria-label="Illustrative map with nearby electricians in red">
                   <svg class="ranking-phone-map-art" viewBox="0 0 320 142" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
                     <rect width="320" height="142" fill="#f2f1ec"/>
                     <path d="M226 0c23 12 35 34 27 56s-29 31-23 53 27 26 56 33H320V0Z" fill="#d9edcf"/>
@@ -1187,57 +1185,49 @@
                     </g>
                   </svg>
                   <span class="ranking-phone-pin ranking-phone-pin--north" aria-hidden="true"></span>
-                  <span class="ranking-phone-map-label ranking-phone-map-label--north" aria-hidden="true">Northside Plumbing Co.</span>
+                  <span class="ranking-phone-map-label ranking-phone-map-label--north" aria-hidden="true">BrightSpark Electrical</span>
                   <span class="ranking-phone-pin ranking-phone-pin--drain" aria-hidden="true"></span>
-                  <span class="ranking-phone-map-label ranking-phone-map-label--drain" aria-hidden="true">A1 Drain Pros</span>
+                  <span class="ranking-phone-map-label ranking-phone-map-label--drain" aria-hidden="true">Copperline Electric</span>
                   <span class="ranking-phone-pin ranking-phone-pin--wrench" aria-hidden="true"></span>
-                  <span class="ranking-phone-map-label ranking-phone-map-label--wrench" aria-hidden="true">Blue Wrench Plumbing</span>
+                  <span class="ranking-phone-map-label ranking-phone-map-label--wrench" aria-hidden="true">Westbrook Electrical</span>
                 </div>
-                <ol class="ranking-phone-results" id="ranking-phone-results" aria-label="Example local plumbing search results">
+                <ol class="ranking-phone-results" id="ranking-phone-results" aria-label="Example local electrician search results">
                   <li data-phone-result>
                     <div class="ranking-phone-result-copy">
-                      <div class="ranking-phone-result-title"><h4>Northside Plumbing Co.</h4></div>
+                      <div class="ranking-phone-result-title"><h4>BrightSpark Electrical</h4></div>
                       <div class="ranking-phone-rating" role="img" aria-label="4.6 out of 5 stars, 212 reviews">4.6 <span class="ranking-phone-stars" aria-hidden="true">★★★★★</span> <span class="ranking-phone-reviews" aria-hidden="true">(212)</span></div>
-                      <p>Plumber · 0.8 mi · <strong>Open</strong></p>
+                      <p>Electrician · 0.8 mi · <strong>Open</strong></p>
                     </div>
                     <span class="ranking-phone-tool" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M14.2 6.2a5 5 0 0 0-6.4 6.4L3.5 17a2.1 2.1 0 0 0 3 3l4.4-4.4a5 5 0 0 0 6.5-6.4l-3.1 3.1-3.2-.8-.8-3.2 3.9-2.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                   </li>
                   <li data-phone-result>
                     <div class="ranking-phone-result-copy">
-                      <div class="ranking-phone-result-title"><h4>A1 Drain Pros</h4></div>
+                      <div class="ranking-phone-result-title"><h4>Copperline Electric</h4></div>
                       <div class="ranking-phone-rating" role="img" aria-label="4.4 out of 5 stars, 96 reviews">4.4 <span class="ranking-phone-stars" aria-hidden="true">★★★★★</span> <span class="ranking-phone-reviews" aria-hidden="true">(96)</span></div>
-                      <p>Plumber · 1.5 mi · <strong>Open</strong></p>
+                      <p>Electrician · 1.5 mi · <strong>Open</strong></p>
                     </div>
                     <span class="ranking-phone-tool" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M14.2 6.2a5 5 0 0 0-6.4 6.4L3.5 17a2.1 2.1 0 0 0 3 3l4.4-4.4a5 5 0 0 0 6.5-6.4l-3.1 3.1-3.2-.8-.8-3.2 3.9-2.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                   </li>
                   <li data-phone-result>
                     <div class="ranking-phone-result-copy">
-                      <div class="ranking-phone-result-title"><h4>Blue Wrench Plumbing</h4></div>
+                      <div class="ranking-phone-result-title"><h4>Westbrook Electrical</h4></div>
                       <div class="ranking-phone-rating" role="img" aria-label="4.5 out of 5 stars, 154 reviews">4.5 <span class="ranking-phone-stars" aria-hidden="true">★★★★★</span> <span class="ranking-phone-reviews" aria-hidden="true">(154)</span></div>
-                      <p>Plumber · 2.1 mi · <strong>Open</strong></p>
-                    </div>
-                    <span class="ranking-phone-tool" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M14.2 6.2a5 5 0 0 0-6.4 6.4L3.5 17a2.1 2.1 0 0 0 3 3l4.4-4.4a5 5 0 0 0 6.5-6.4l-3.1 3.1-3.2-.8-.8-3.2 3.9-2.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                  </li>
-                  <li data-phone-result>
-                    <div class="ranking-phone-result-copy">
-                      <div class="ranking-phone-result-title"><h4>Cityline Plumbing</h4></div>
-                      <div class="ranking-phone-rating" role="img" aria-label="4.2 out of 5 stars, 61 reviews">4.2 <span class="ranking-phone-stars" aria-hidden="true">★★★★★</span> <span class="ranking-phone-reviews" aria-hidden="true">(61)</span></div>
-                      <p>Plumber · 1.1 mi · <strong>Open</strong></p>
+                      <p>Electrician · 2.1 mi · <strong>Open</strong></p>
                     </div>
                     <span class="ranking-phone-tool" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M14.2 6.2a5 5 0 0 0-6.4 6.4L3.5 17a2.1 2.1 0 0 0 3 3l4.4-4.4a5 5 0 0 0 6.5-6.4l-3.1 3.1-3.2-.8-.8-3.2 3.9-2.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                   </li>
                   <li class="ranking-phone-featured" data-phone-result data-phone-featured-result>
                     <div class="ranking-phone-result-copy">
-                      <div class="ranking-phone-result-title"><h4>Your business</h4><span class="ranking-phone-rank" data-phone-rank-label>#5</span></div>
+                      <div class="ranking-phone-result-title"><h4>Your business</h4><span class="ranking-phone-rank" data-phone-rank-label>#4</span></div>
                       <div class="ranking-phone-rating" role="img" aria-label="4.9 out of 5 stars, 128 reviews">4.9 <span class="ranking-phone-stars" aria-hidden="true">★★★★★</span> <span class="ranking-phone-reviews" aria-hidden="true">(128)</span></div>
-                      <p>Plumber · 1.2 mi · <strong>Open</strong></p>
+                      <p>Electrician · 1.2 mi · <strong>Open</strong></p>
                     </div>
                     <span class="ranking-phone-tool" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M14.2 6.2a5 5 0 0 0-6.4 6.4L3.5 17a2.1 2.1 0 0 0 3 3l4.4-4.4a5 5 0 0 0 6.5-6.4l-3.1 3.1-3.2-.8-.8-3.2 3.9-2.1Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                   </li>
                 </ol>
               </div>
             </div>
-            <p class="ranking-phone-status" id="ranking-phone-status" aria-live="polite">Your business starts at position #5 in this preview.</p>
+            <p class="ranking-phone-status" id="ranking-phone-status" aria-live="polite">Your business starts at position #4 in this preview.</p>
             <p class="ranking-phone-caption">Illustrative mobile preview · Listings, ratings and positions are examples only.</p>
           </section>
           <section class="performance-demo reveal" aria-labelledby="performance-title">
@@ -1874,7 +1864,7 @@
       void rankingPhoneList.offsetHeight;
       rankingPhoneDemo.classList.remove("is-resetting", "is-complete");
       rankingPhoneDemo.classList.add("is-playing");
-      rankingPhoneStatus.textContent = "Your business starts at position #5 in this preview.";
+      rankingPhoneStatus.textContent = `Your business starts at position #${startingPhoneOrder.length} in this preview.`;
 
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       if (reducedMotion) {
